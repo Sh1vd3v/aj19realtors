@@ -64,13 +64,14 @@
           <h3>Book Free Site Visit</h3>
 
           <form
+            id="leadForm"
             action="https://docs.google.com/forms/d/e/1FAIpQLScyCDO2oqLODhc2TPH77Zn-h53MnoULLQHzi3-HZvuBj2kM5w/formResponse"
             method="post"
             target="hidden_iframe"
             onsubmit="
-              submitted = true;
               trackLead();
               showThankYou();
+              this.reset();
             "
           >
             <input
@@ -107,7 +108,8 @@
               id="thankyou"
               style="display: none; margin-top: 15px; color: green"
             >
-              Thank you! Our team will contact you shortly !!.
+              Thank you!<br />
+              Our team will contact you shortly.
             </div>
           </form>
         </div>
@@ -206,6 +208,9 @@
       </p>
     </footer>
     <script>
+      function clearForm() {
+        document.getElementById("leadForm").reset();
+      }
       function showThankYou() {
         document.getElementById("thankyou").style.display = "block";
       }
