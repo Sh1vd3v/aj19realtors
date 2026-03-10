@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=GTM-XXXX";
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-XXXX");
+
+      function trackLead() {
+        dataLayer.push({
+          event: "lead_form_submit",
+        });
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <title>
+      Assetz Sublime Hoskote | Luxury 3 BHK Apartments Starting ₹1.84 Cr
+    </title>
+    <link rel="stylesheet" href="../css/index.css" />
+
+    <meta
+      name="description"
+      content="Premium 3 BHK homes at Assetz Sublime in Hoskote, East Bangalore. Spacious apartments, world-class amenities and excellent connectivity. Book a site visit today."
+    />
+
+    <meta property="og:title" content="Assetz Sublime | Luxury 3 BHK Homes" />
+    <meta
+      property="og:description"
+      content="Premium apartments in East Bangalore starting from ₹1.84 Cr."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="hero-image.jpg" />
+  </head>
+
+  <body>
+    <!-- HERO SECTION -->
+    <iframe name="hidden_iframe" style="display: none"></iframe>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Luxury 3 BHK Homes in East Bangalore</h1>
+          <p>
+            Discover <span class="highlight">Assetz Sublime</span> – premium
+            high-rise residences in Hoskote with world-class amenities, spacious
+            layouts and excellent connectivity.
+          </p>
+
+          <p><strong>Starting Price: ₹1.84 Cr*</strong></p>
+
+          <a href="#leadform" class="cta-btn">Get Floor Plan & Price Sheet</a>
+        </div>
+
+        <div class="form-box" id="leadform">
+          <h3>Book Free Site Visit</h3>
+
+          <form
+            id="leadForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLScyCDO2oqLODhc2TPH77Zn-h53MnoULLQHzi3-HZvuBj2kM5w/formResponse"
+            method="post"
+            target="hidden_iframe"
+            onsubmit="
+              trackLead();
+              showThankYou();
+              this.reset();
+            "
+          >
+            <input
+              type="text"
+              name="entry.1781118419"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="tel"
+              name="entry.814579350"
+              placeholder="Phone Number"
+              pattern="[0-9]{10}"
+              oninput="
+                this.value = this.value.replace(/[^0-9]/g, '');
+                this.setCustomValidity('');
+              "
+              inputmode="numeric"
+              maxlength="10"
+              oninvalid="
+                this.setCustomValidity(
+                  'Please enter a valid 10-digit phone number',
+                )
+              "
+              required
+            />
+            <input
+              type="text"
+              name="entry.1903348953"
+              placeholder="Requirements"
+            />
+            <button type="submit">Get Details</button>
+            <div
+              id="thankyou"
+              style="display: none; margin-top: 15px; color: green"
+            >
+              Thank you!<br />
+              Our team will contact you shortly.
+            </div>
+          </form>
+        </div>
+    <section>
+      <div class="container">
+        <h2 class="section-title">Project Highlights</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h4>11 Acre Development</h4>
+            <p>Large integrated township with premium infrastructure.</p>
+          </div>
+
+          <div class="card">
+            <h4>3 Premium Towers</h4>
+            <p>High-rise towers with 2B + G + 36 floors.</p>
+          </div>
+
+          <div class="card">
+            <h4>Spacious 3 BHK Homes</h4>
+            <p>Sizes from 1649 – 1849 sq.ft designed for comfort.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMENITIES -->
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">World Class Amenities</h2>
+
+        <div class="amenities">
+          <div class="amenity">32,000 sq.ft Clubhouse</div>
+          <div class="amenity">Swimming Pool</div>
+          <div class="amenity">Gym & Fitness Center</div>
+          <div class="amenity">Kids Play Area</div>
+          <div class="amenity">Landscaped Gardens</div>
+          <div class="amenity">Indoor Games</div>
+          <div class="amenity">Sports Courts</div>
+          <div class="amenity">Yoga Deck</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Prime Location Advantage</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h4>NH 75 Connectivity</h4>
+            <p>Fast access to major employment hubs.</p>
+          </div>
+
+          <div class="card">
+            <h4>Old Madras Road Access</h4>
+            <p>Quick connectivity to Whitefield & IT parks.</p>
+          </div>
+
+          <div class="card">
+            <h4>High Growth Corridor</h4>
+            <p>Located in rapidly developing Hoskote zone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+
+    <section class="cta-banner">
+      <h2>Limited Pre-Launch Units Available</h2>
+      <p>
+        Register now to receive floor plans, price sheet and exclusive offers.
+      </p>
+
+      <br />
+
+      <a href="#leadform" class="cta-btn">Register Now</a>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <p>© 2026 Assetz Sublime | All Rights Reserved</p>
+      <p>
+        This is not the official website. Information is for marketing purposes
+        only.
+      </p>
+    </footer>
+    <script>
+      function clearForm() {
+        document.getElementById("leadForm").reset();
+      }
+      function showThankYou() {
+        document.getElementById("thankyou").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
