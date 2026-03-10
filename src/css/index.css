@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HERO SECTION */
+
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/heroImage.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  color: #ffd166;
+  font-weight: bold;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #ff6b35;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FORM */
+
+.form-box {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.form-box h3 {
+  margin-bottom: 15px;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 14px;
+  background: #ff6b35;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 70px 0;
+  background: white;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h4 {
+  margin-bottom: 10px;
+}
+
+/* AMENITIES */
+
+.amenities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.amenity {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* CTA BANNER */
+
+.cta-banner {
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-banner h2 {
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
