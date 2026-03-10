@@ -10,7 +10,7 @@
           j = d.createElement(s),
           dl = l != "dataLayer" ? "&l=" + l : "";
         j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=GTM-XXXX";
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-XXXX");
 
@@ -20,13 +20,17 @@
         });
       }
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
     <title>
       Assetz Sublime Hoskote | Luxury 3 BHK Apartments Starting ₹1.84 Cr
     </title>
-    <link rel="stylesheet" href="../css/index.css" />
+
+    <link rel="stylesheet" href="index.css" />
 
     <meta
       name="description"
@@ -39,16 +43,20 @@
       content="Premium apartments in East Bangalore starting from ₹1.84 Cr."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="hero-image.jpg" />
+    <meta property="og:image" content="/assets/heroImage.jpg" />
   </head>
 
   <body>
-    <!-- HERO SECTION -->
+    <!-- hidden iframe for google form -->
     <iframe name="hidden_iframe" style="display: none"></iframe>
+
+    <!-- HERO SECTION -->
+
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <h1>Luxury 3 BHK Homes in East Bangalore</h1>
+
           <p>
             Discover <span class="highlight">Assetz Sublime</span> – premium
             high-rise residences in Hoskote with world-class amenities, spacious
@@ -57,7 +65,7 @@
 
           <p><strong>Starting Price: ₹1.84 Cr*</strong></p>
 
-          <a href="#leadform" class="cta-btn">Get Floor Plan & Price Sheet</a>
+          <a href="#leadform" class="cta-btn"> Get Floor Plan & Price Sheet </a>
         </div>
 
         <div class="form-box" id="leadform">
@@ -71,7 +79,7 @@
             onsubmit="
               trackLead();
               showThankYou();
-              this.reset();
+              setTimeout(() => this.reset(), 500);
             "
           >
             <input
@@ -80,30 +88,34 @@
               placeholder="Full Name"
               required
             />
+
             <input
               type="tel"
               name="entry.814579350"
               placeholder="Phone Number"
               pattern="[0-9]{10}"
+              maxlength="10"
+              inputmode="numeric"
+              required
               oninput="
                 this.value = this.value.replace(/[^0-9]/g, '');
                 this.setCustomValidity('');
               "
-              inputmode="numeric"
-              maxlength="10"
               oninvalid="
                 this.setCustomValidity(
                   'Please enter a valid 10-digit phone number',
                 )
               "
-              required
             />
+
             <input
               type="text"
               name="entry.1903348953"
               placeholder="Requirements"
             />
+
             <button type="submit">Get Details</button>
+
             <div
               id="thankyou"
               style="display: none; margin-top: 15px; color: green"
@@ -113,6 +125,11 @@
             </div>
           </form>
         </div>
+      </div>
+    </section>
+
+    <!-- PROJECT HIGHLIGHTS -->
+
     <section>
       <div class="container">
         <h2 class="section-title">Project Highlights</h2>
@@ -180,32 +197,30 @@
       </div>
     </section>
 
-    <!-- CTA BANNER -->
+    <!-- CTA -->
 
     <section class="cta-banner">
       <h2>Limited Pre-Launch Units Available</h2>
+
       <p>
         Register now to receive floor plans, price sheet and exclusive offers.
       </p>
 
-      <br />
-
-      <a href="#leadform" class="cta-btn">Register Now</a>
+      <a href="#leadform" class="cta-btn"> Register Now </a>
     </section>
 
     <!-- FOOTER -->
 
     <footer>
       <p>© 2026 Assetz Sublime | All Rights Reserved</p>
+
       <p>
         This is not the official website. Information is for marketing purposes
         only.
       </p>
     </footer>
+
     <script>
-      function clearForm() {
-        document.getElementById("leadForm").reset();
-      }
       function showThankYou() {
         document.getElementById("thankyou").style.display = "block";
       }
