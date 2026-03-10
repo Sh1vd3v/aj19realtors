@@ -1,11 +1,45 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=GTM-XXXX";
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-XXXX");
+
+      function trackLead() {
+        dataLayer.push({
+          event: "lead_form_submit",
+        });
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../assets/favicon.png" />
-    <title>Assetz Sublime | Premium 3 BHK Homes</title>
+    <title>
+      Assetz Sublime Hoskote | Luxury 3 BHK Apartments Starting ₹1.84 Cr
+    </title>
     <link rel="stylesheet" href="../css/index.css" />
+
+    <meta
+      name="description"
+      content="Premium 3 BHK homes at Assetz Sublime in Hoskote, East Bangalore. Spacious apartments, world-class amenities and excellent connectivity. Book a site visit today."
+    />
+
+    <meta property="og:title" content="Assetz Sublime | Luxury 3 BHK Homes" />
+    <meta
+      property="og:description"
+      content="Premium apartments in East Bangalore starting from ₹1.84 Cr."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="hero-image.jpg" />
   </head>
 
   <body>
@@ -35,6 +69,7 @@
             target="hidden_iframe"
             onsubmit="
               submitted = true;
+              trackLead();
               showThankYou();
             "
           >
@@ -49,7 +84,10 @@
               name="entry.814579350"
               placeholder="Phone Number"
               pattern="[0-9]{10}"
-              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              oninput="
+                this.value = this.value.replace(/[^0-9]/g, '');
+                this.setCustomValidity('');
+              "
               inputmode="numeric"
               maxlength="10"
               oninvalid="
