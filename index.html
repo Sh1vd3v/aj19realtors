@@ -84,11 +84,6 @@
             action="https://docs.google.com/forms/d/e/1FAIpQLScyCDO2oqLODhc2TPH77Zn-h53MnoULLQHzi3-HZvuBj2kM5w/formResponse"
             method="post"
             target="hidden_iframe"
-            onsubmit="
-              trackLead();
-              showThankYou();
-              setTimeout(() => this.reset(), 500);
-            "
           >
             <input
               type="text"
@@ -119,7 +114,7 @@
             <input
               type="text"
               name="entry.1903348953"
-              placeholder="Requirements"
+              placeholder="Requirements (Optional)"
             />
 
             <button type="submit">Get Details</button>
@@ -229,9 +224,26 @@
     </footer>
 
     <script>
-      function showThankYou() {
-        document.getElementById("thankyou").style.display = "block";
-      }
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("leadForm");
+        const thankyou = document.getElementById("thankyou");
+
+        form.addEventListener("submit", function (e) {
+          // Call tracking if defined
+          if (typeof trackLead === "function") trackLead();
+
+          // Show thank-you message
+          thankyou.style.display = "block";
+
+          // Reset the form after 1 second (user sees the message)
+          setTimeout(() => {
+            form.reset();
+          }, 50);
+
+          // Form still submits to hidden iframe
+          // DO NOT call e.preventDefault()
+        });
+      });
     </script>
   </body>
 </html>
